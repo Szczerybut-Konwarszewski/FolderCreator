@@ -22,6 +22,7 @@ Partial Class folder_creator
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(folder_creator))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.lb_question = New System.Windows.Forms.Label()
@@ -34,14 +35,16 @@ Partial Class folder_creator
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.tBox_lvls_of_list = New System.Windows.Forms.TextBox()
+        Me.background_timer = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(89, 206)
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Location = New System.Drawing.Point(189, 179)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(101, 44)
+        Me.Button1.Size = New System.Drawing.Size(233, 93)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Create!"
         Me.Button1.UseVisualStyleBackColor = True
@@ -61,7 +64,7 @@ Partial Class folder_creator
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuToolStripMenuItem, Me.AboutToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(284, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(624, 24)
         Me.MenuStrip1.TabIndex = 3
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -93,7 +96,7 @@ Partial Class folder_creator
         '
         'tBox_folders_per_level
         '
-        Me.tBox_folders_per_level.Location = New System.Drawing.Point(220, 94)
+        Me.tBox_folders_per_level.Location = New System.Drawing.Point(299, 4)
         Me.tBox_folders_per_level.Name = "tBox_folders_per_level"
         Me.tBox_folders_per_level.Size = New System.Drawing.Size(55, 20)
         Me.tBox_folders_per_level.TabIndex = 4
@@ -101,7 +104,7 @@ Partial Class folder_creator
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 97)
+        Me.Label1.Location = New System.Drawing.Point(117, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(176, 13)
         Me.Label1.TabIndex = 5
@@ -110,7 +113,7 @@ Partial Class folder_creator
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 124)
+        Me.Label2.Location = New System.Drawing.Point(360, 7)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(184, 13)
         Me.Label2.TabIndex = 7
@@ -118,17 +121,22 @@ Partial Class folder_creator
         '
         'tBox_lvls_of_list
         '
-        Me.tBox_lvls_of_list.Location = New System.Drawing.Point(220, 121)
+        Me.tBox_lvls_of_list.Location = New System.Drawing.Point(557, 4)
         Me.tBox_lvls_of_list.Name = "tBox_lvls_of_list"
         Me.tBox_lvls_of_list.Size = New System.Drawing.Size(55, 20)
         Me.tBox_lvls_of_list.TabIndex = 6
+        '
+        'background_timer
+        '
+        Me.background_timer.Interval = 10
         '
         'folder_creator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(284, 262)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.ClientSize = New System.Drawing.Size(624, 442)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.tBox_lvls_of_list)
         Me.Controls.Add(Me.Label1)
@@ -159,4 +167,5 @@ Partial Class folder_creator
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents tBox_lvls_of_list As TextBox
+    Friend WithEvents background_timer As Timer
 End Class

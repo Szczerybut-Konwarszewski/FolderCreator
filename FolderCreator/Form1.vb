@@ -23,6 +23,8 @@ Public Class folder_creator
     Dim alert_Buttons = MessageBoxButtons.YesNo
     Dim strFileName As String
 
+
+
     ''''''''''''''' PUBLIC FUNCTIONS DECLARATION '''''''''''''''
 
     ' 2. Checking for input mistakes
